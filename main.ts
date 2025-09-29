@@ -26,10 +26,10 @@ joystickbit.onButtonEvent(joystickbit.JoystickBitPin.P12, joystickbit.ButtonType
     basic.showString("C")
 })
 joystickbit.onButtonEvent(joystickbit.JoystickBitPin.P15, joystickbit.ButtonType.down, function () {
-    basic.showString("F")
+    led.plot(randint(0, 4), randint(0, 4))
 })
 joystickbit.onButtonEvent(joystickbit.JoystickBitPin.P13, joystickbit.ButtonType.down, function () {
-    basic.showString("D")
+    led.toggle(randint(0, 4), randint(0, 4))
 })
 input.onButtonPressed(Button.A, function () {
     music.playSoundEffect(music.builtinSoundEffect(soundExpression.spring), SoundExpressionPlayMode.InBackground)
@@ -85,7 +85,7 @@ input.onButtonPressed(Button.B, function () {
     basic.showIcon(IconNames.Sad)
 })
 joystickbit.onButtonEvent(joystickbit.JoystickBitPin.P14, joystickbit.ButtonType.down, function () {
-    basic.showString("E")
+    basic.clearScreen()
 })
 joystickbit.initJoystickBit()
 basic.showIcon(IconNames.Heart)
