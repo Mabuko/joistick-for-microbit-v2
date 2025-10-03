@@ -10,16 +10,16 @@ input.onGesture(Gesture.Shake, function () {
     basic.showLeds(`
         . # . # .
         . . . . .
-        . # # # .
+        # # # # #
         # . . . #
-        . # # # .
+        # # # # #
         `)
     basic.showLeds(`
         . # . # .
         . . . . .
         . . . . .
         # # # # #
-        . . . . .
+        # . . . #
         `)
 })
 joystickbit.onButtonEvent(joystickbit.JoystickBitPin.P12, joystickbit.ButtonType.down, function () {
@@ -72,11 +72,11 @@ input.onButtonPressed(Button.AB, function () {
     } else {
         music._playDefaultBackground(music.builtInPlayableMelody(Melodies.PowerDown), music.PlaybackMode.InBackground)
         basic.showLeds(`
-            . . # # .
+            . # # # .
+            . . # # #
             . . . # #
-            . . . # #
-            . . . # #
-            . . # # .
+            . . # # #
+            . # # # .
             `)
     }
 })
@@ -88,4 +88,5 @@ joystickbit.onButtonEvent(joystickbit.JoystickBitPin.P14, joystickbit.ButtonType
     basic.clearScreen()
 })
 joystickbit.initJoystickBit()
+music.playSoundEffect(music.builtinSoundEffect(soundExpression.hello), SoundExpressionPlayMode.InBackground)
 basic.showIcon(IconNames.Heart)
