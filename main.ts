@@ -24,6 +24,7 @@ input.onGesture(Gesture.Shake, function () {
 })
 joystickbit.onButtonEvent(joystickbit.JoystickBitPin.P12, joystickbit.ButtonType.down, function () {
     basic.showString("C")
+    joystickbit.Vibration_Motor(100)
 })
 joystickbit.onButtonEvent(joystickbit.JoystickBitPin.P15, joystickbit.ButtonType.down, function () {
     led.plot(randint(0, 4), randint(0, 4))
