@@ -28,6 +28,7 @@ joystickbit.onButtonEvent(joystickbit.JoystickBitPin.P12, joystickbit.ButtonType
 })
 joystickbit.onButtonEvent(joystickbit.JoystickBitPin.P15, joystickbit.ButtonType.down, function () {
     led.plot(randint(0, 4), randint(0, 4))
+    joystickbit.Vibration_Motor(100)
 })
 joystickbit.onButtonEvent(joystickbit.JoystickBitPin.P13, joystickbit.ButtonType.down, function () {
     led.toggle(randint(0, 4), randint(0, 4))
