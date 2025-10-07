@@ -23,11 +23,8 @@ input.onGesture(Gesture.Shake, function () {
         `)
 })
 joystickbit.onButtonEvent(joystickbit.JoystickBitPin.P12, joystickbit.ButtonType.down, function () {
-    if (true) {
-    	
-    } else {
-    	
-    }
+    pocitadlo += 1
+    basic.showNumber(pocitadlo)
 })
 joystickbit.onButtonEvent(joystickbit.JoystickBitPin.P15, joystickbit.ButtonType.down, function () {
     led.plot(randint(0, 4), randint(0, 4))
@@ -92,6 +89,8 @@ input.onButtonPressed(Button.B, function () {
 joystickbit.onButtonEvent(joystickbit.JoystickBitPin.P14, joystickbit.ButtonType.down, function () {
     basic.clearScreen()
 })
+let pocitadlo = 0
 joystickbit.initJoystickBit()
 music.playSoundEffect(music.builtinSoundEffect(soundExpression.hello), SoundExpressionPlayMode.InBackground)
-basic.showIcon(IconNames.Heart)
+pocitadlo = 0
+basic.showNumber(pocitadlo)
